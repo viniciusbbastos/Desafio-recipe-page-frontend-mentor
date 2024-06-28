@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+:root {
+	/* Cores Primarias */
+	--Nutmeg: hsl(14, 45%, 36%);
+	--Dark-Raspberry: hsl(332, 51%, 32%);
+	
+	/* Cores Secundarias */
+	--White: hsl(0, 0%, 100%);
+	--Rose-White: hsl(330, 100%, 98%);
+	--Eggshell: hsl(30, 54%, 90%);
+	--Light-Grey: hsl(30, 18%, 87%);
+	--Wenge-Brown: hsl(30, 10%, 34%);
+	--Dark-Charcoal: hsl(24, 5%, 18%);
+	
+	/* Fontes */
+	--Young: "Young Serif", serif;
+	--Outfit: "Outfit", sans-serif;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: var(--Eggshell);
+	color: var(--Dark-Charcoal);
+	height: 100vh;
+	display: flex;
+	padding: 5%;
+	flex-direction: column;
+	align-items: center;
+}
+
+p {
+	color: var(--Wenge-Brown);
+	font-family: var(--Outfit);
+	font-size: 1rem;
+}
+
+.conteudo {
+	background-color: var(--White);
+	width: 720px;
+	border-radius: 16px;
+	padding: 24px;
+}
+
+.conteudo__imagem {
+	width: 100%;
+	border-radius: 8px;
+}
+
+.conteudo__info {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+h1 {
+	font-family: var(--Young);
+	font-weight: 400;
+	font-size: 2.5rem;
+}
+
+h2 {
+	font-family: var(--Young);
+	font-weight: 400;
+	font-size: 2rem;
+	color: var(--Nutmeg);
+}
+
+hr {
+	border: 1px solid var(--Light-Grey);
+}
+
+.conteudo__info__tempo {
+	background-color: var(--Rose-White);
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	border-radius: 8px;
+	padding: 5%;
+}
+
+.conteudo__info__tempo__lista {
+	margin-left: 5%;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	color: var(--Wenge-Brown);
+}
+
+.conteudo__info__tempo__lista .lista__tempo::marker {
+	color: var(--Dark-Raspberry);
+}
+
+.conteudo__info__tempo__lista .lista__info::marker {
+	color: var(--Nutmeg);
+}
+
+.conteudo__info__tempo__lista .ordenada::marker {
+	color: var(--Nutmeg);
+}
+
+li {
+	padding-left: 16px;
+}
+
+.conteudo__info__tempo h3 {
+	font-family: var(--Outfit);
+	color: var(--Dark-Raspberry);
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+table td{
+	padding: 16px;
+	font-family: var(--Outfit);
+	color: var(--Wenge-Brown);
+}
+
+td strong {
+	color: var(--Nutmeg);
+}
+
+.nutricional__item {
+	border-bottom: 1px solid var(--Light-Grey);
+}
+
+.attribution { 
+	font-size: 11px;
+	text-align: center;
+	padding: 16px;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 720px) {
+	body {
+		padding: 0;
+	}
+	.conteudo {
+		width: 100%;
+		padding: 0;
+		border-radius: 0;
+	}
+	.conteudo__imagem {
+		border-radius: 0;
+	}
+	.conteudo__info {
+		margin: 5%;
+	}
+}
